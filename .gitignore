@@ -1,0 +1,8 @@
+#python
+lib/
+include/
+bin/
+#cache
+certificaciones/__pycache__/
+certificaciones_python/__pycache__/
+manage.py
