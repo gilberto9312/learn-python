@@ -5,4 +5,5 @@ bin/
 #cache
 certificaciones/__pycache__/
 certificaciones_python/__pycache__/
+certificaciones_python/migrations/
 manage.py
