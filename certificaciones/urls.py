@@ -20,4 +20,7 @@ from certificaciones_python import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
+    path('periodo', views.periodo, name='periodo'),
+    path('periodo/create', views.periodo_create, name='periodo_create'),
+    path('periodo/<int:periodo_id>/', views.periodo_view, name='periodo_view')
 ]

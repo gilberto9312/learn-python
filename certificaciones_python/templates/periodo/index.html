@@ -1,0 +1,11 @@
+
+{% if lista %}
+    <ul>
+    {% for periodo in lista %}
+        <li><a href="{% url 'periodo_view' periodo.id %}">{{ periodo.nombre }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>no existe registro</p>
+{% endif %}
+
