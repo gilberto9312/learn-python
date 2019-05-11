@@ -22,5 +22,7 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('periodo', views.periodo, name='periodo'),
     path('periodo/create', views.periodo_create, name='periodo_create'),
-    path('periodo/<int:periodo_id>/', views.periodo_view, name='periodo_view')
+    path('periodo/<int:periodo_id>/', views.periodo_view, name='periodo_view'),
+    path('periodo/<int:periodo_id>/edit', views.periodo_edit, name='periodo_edit'),
+    path('periodo/<int:periodo_id>/delete', views.periodo_delete, name='periodo_delete'),
 ]

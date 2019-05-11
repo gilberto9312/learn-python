@@ -28,4 +28,22 @@ def periodo_create(request):
     else:
         form = PeriodoForm
     return render(request, 'periodo/periodo_form.html', {'form':form})
+
+def periodo_edit(request, periodo_id):
+    periodo = Periodo.objects.get(id=periodo_id)
+    if request.method == 'GET':
+        form = PeriodoForm(instance = periodo)
+    else:
+        form = PeriodoForm(request.POST, instance = periodo)
+        if form.is_valid():
+            form.save()
+        return redirect('periodo')
+    return render(request, 'periodo/periodo_form.html', {'form':form})
+
+def periodo_delete(request, periodo_id):
+    periodo = Periodo.objects.get(id=periodo_id)
+    if request.method == 'POST':
+        periodo.delete()
+        return redirect('periodo')
+    return render(request, 'periodo/periodo_delete.html',{'periodo' : periodo}) 
         
